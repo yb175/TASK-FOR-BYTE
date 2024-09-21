@@ -37,7 +37,7 @@ const User = {
 passport.use(new YouTubeV3Strategy({
   clientID: process.env.YOUTUBE_APP_ID,
   clientSecret: process.env.YOUTUBE_APP_SECRET,
-  callbackURL: `http://localhost:${port}/auth/youtube/callback`,
+  callbackURL: `https://byte-project-yb.vercel.app/auth/youtube/callback`,
   scope: ['https://www.googleapis.com/auth/youtube.readonly']
 },
 async function(accessToken, refreshToken, profile, done) {
@@ -79,7 +79,7 @@ async function(accessToken, refreshToken, profile, done) {
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: `http://localhost:${process.env.PORT || 3000}/auth/github/callback`
+  callbackURL: `https://byte-project-yb.vercel.app/auth/github/callback`,
 },
 async function(accessToken, refreshToken, profile, done) {
   try {
