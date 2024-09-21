@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "node app.js",
+    "build": "npm run build",
     "dev": "nodemon app.js"
   }
 }
